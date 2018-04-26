@@ -50,12 +50,10 @@ class Dump
 		 * DEBUG_BACKTRACE_PROVIDE_OBJECT : Provide current object property.
 		 * DEBUG_BACKTRACE_IGNORE_ARGS    : Ignore function or method arguments.
 		 */
-		$trace = debug_backtrace( false, 2)[1];
+		$trace = debug_backtrace( DEBUG_BACKTRACE_IGNORE_ARGS, 2)[1];
 
 		//	Arguments.
-		/*
-		$args = $trace['args'];
-		*/
+	//	$args = $trace['args'];
 		$args = func_get_args()[0];
 
 		//	...
