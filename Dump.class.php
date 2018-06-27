@@ -163,11 +163,11 @@ class Dump
 		}
 
 		//	...
-		print '<div class="OP_MARK">'.self::_toJson($mark).'</div>'.PHP_EOL;
+		Json($mark, 'OP_MARK');
 
 		//	...
 		foreach( $later as $value ){
-			print '<div class="OP_DUMP">'.self::_toJson($value).'</div>'.PHP_EOL;
+			Json($value, 'OP_DUMP');
 		}
 	}
 
