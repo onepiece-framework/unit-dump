@@ -30,17 +30,6 @@ class Dump
 	 */
 	use \OP_CORE;
 
-	/** Convert to json from array.
-	 *
-	 * @param array $obj
-	 */
-	static function _toJson($obj)
-	{
-		$json = json_encode($obj);
-		$json = htmlentities($json, ENT_NOQUOTES, 'utf-8');
-		return $json;
-	}
-
 	/** Mark
 	 *
 	 */
