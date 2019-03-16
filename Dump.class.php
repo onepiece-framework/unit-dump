@@ -80,6 +80,9 @@ class Dump
 		 */
 		$trace = debug_backtrace( DEBUG_BACKTRACE_IGNORE_ARGS, 2)[1];
 
+		//	...
+		$trace['file'] = CompressPath($trace['file']);
+
 		//	Arguments.
 		$args = func_get_args()[0];
 
@@ -132,7 +135,7 @@ class Dump
 
 		//	$mark
 		$mark = [];
-		$mark['file'] = CompressPath($trace['file']);
+		$mark['file'] = $trace['file'];
 		$mark['line'] = $trace['line'];
 		$mark['args'] = [];
 
