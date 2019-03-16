@@ -6,14 +6,14 @@ Unit of Dump for onepiece-framework
 
 # How to use
 
-```
+```php
 <?php
+//	...
+namespace OP;
 
 //	Set admin IP-Address. (Localhost is always admin.)
 Env::Set( Env::_ADMIN_IP_, '192.168.0.2' );
 
 //	Do Dump.
-D($_REQUEST);
-
-?>
+D($_SESSION);
 ```
