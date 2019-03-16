@@ -12,6 +12,10 @@ div.OP_DUMP {
 	margin-bottom:  0.25em;
 }
 
+div.OP_DUMP * {
+	font-size: 9pt;
+}
+
 div.OP_DUMP table,
 div.OP_DUMP th,
 div.OP_DUMP td {
