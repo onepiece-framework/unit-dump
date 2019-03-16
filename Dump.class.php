@@ -15,6 +15,14 @@
  */
 namespace OP\UNIT;
 
+/** Used class
+ *
+ */
+use OP\OP_CORE;
+use OP\Env;
+use function OP\Json;
+use function OP\CompressPath;
+
 /** Dump
  *
  * @creation  2018-04-13
@@ -28,7 +36,7 @@ class Dump
 	/** trait
 	 *
 	 */
-	use \OP_CORE;
+	use OP_CORE;
 
 	/** Escape variable.
 	 *
@@ -79,7 +87,7 @@ class Dump
 		self::_Escape($args);
 
 		//	...
-		switch( $mime = \Env::Mime() ){
+		switch( Env::Mime() ){
 			case 'text/css':
 				self::MarkCss($args, $trace);
 				break;
