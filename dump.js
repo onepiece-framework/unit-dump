@@ -17,12 +17,6 @@ if( $OP === undefined ){
 	//	...
 	$OP.Dump = function(div){
 		//	...
-		if( $OP.Arg === undefined ){
-			console.error('The $OP global variable has not been initialized.');
-			return;
-		}
-
-		//	...
 		if( div.innerText.length < 1 ){
 			return;
 		}
@@ -33,6 +27,52 @@ if( $OP === undefined ){
 		div.innerText = '';
 		div.appendChild(dump);
 	}
+
+	//	...
+	function Arg(arg){
+		//	...
+		var type = (arg === null) ? 'null': typeof arg;
+		var span = document.createElement('span');
+
+		//	...
+		span.innerText = (arg === null) ? 'null':arg;
+
+		//	...
+		span.classList.add('arg');
+		span.classList.add(type);
+
+		//	...
+		switch( type ){
+			case 'boolean':
+				span.classList.add( arg ? 'true':'false' );
+			break;
+			case 'string':
+				//	Empty or Number
+				if( arg.length === 0 || arg.match(/^[0-9]+$/) ){
+					span.classList.add('quote');
+				}else
+
+				//	Has white space.
+				if( arg.match(/\s/) ){
+					arg = arg.replace(/\t/g, '\\t');
+					arg = arg.replace(/\n/g, '\\n');
+					arg = arg.replace(/\r/g, '\\r');
+					span.innerText = arg;
+
+					//	...
+					var html = span.innerHTML;
+					html = html.replace(/ /g  ,'<span class="meta space">&nbsp;</span>');
+					html = html.replace(/\\t/g,'<span class="meta">\\t</span>');
+					html = html.replace(/\\n/g,'<span class="meta">\\n</span>');
+					html = html.replace(/\\r/g,'<span class="meta">\\r</span>');
+					span.innerHTML = html;
+				};
+			break;
+		};
+
+		//	...
+		return span;
+	};
 
 	//	...
 	function table(json){
@@ -60,7 +100,7 @@ if( $OP === undefined ){
 		//	...
 		var match = index.match(/\s/);
 		if( match ){
-			console.log('The index key of associative array included space character.', match);
+			console.log('The index key of associative array included space character.', match, index);
 		}
 
 		//	...
@@ -72,7 +112,7 @@ if( $OP === undefined ){
 			//	...
 			var span = document.createElement('span');
 				span.classList.add('arg');
-				span.appendChild( $OP.Arg(value) );
+				span.appendChild( Arg(value) );
 
 			//	...
 			var args = document.createElement('span');
