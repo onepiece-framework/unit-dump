@@ -202,7 +202,8 @@ class Dump
 	 */
 	static function MarkJson($value, $trace)
 	{
-		global $_JSON;
+		global $_JSON; // Why used global variable? <-- Use API?
+		$mark = [];
 		$mark['message']   = $value;
 		$mark['backtrace'] = $trace;
 		$_JSON['admin']['mark'][] = $mark;
