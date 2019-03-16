@@ -190,9 +190,9 @@ class Dump
 	 */
 	static function MarkJS($value, $trace)
 	{
-		print PHP_EOL;
-		print "console.log($value);".PHP_EOL;
-		print "console.dir($trace);".PHP_EOL;
+		$value = json_encode($value);
+		$trace = json_encode($trace);
+		echo "console.log(JSON.parse('{$trace}'), JSON.parse('{$value}'));";
 	}
 
 	/** MarkJson
