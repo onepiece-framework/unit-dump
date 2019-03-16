@@ -120,6 +120,7 @@ class Dump
 				}
 				//	...
 				self::MarkHtml($args, $trace);
+			break;
 		}
 	}
 
@@ -165,10 +166,10 @@ class Dump
 					$later[] = $value;
 					$value   = get_class($value);
 					break;
-			}
+			};
 
 			$mark['args'][] = $value;
-		}
+		};
 
 		//	...
 		Json($mark, 'OP_MARK');
