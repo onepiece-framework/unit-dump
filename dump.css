@@ -20,7 +20,6 @@ div.OP_DUMP _table,
 div.OP_DUMP th,
 div.OP_DUMP td {
 	border: 1px solid black;
-	padding: 3px 0;
 }
 
 div.OP_DUMP table {
