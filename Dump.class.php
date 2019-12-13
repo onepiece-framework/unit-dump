@@ -19,6 +19,8 @@ namespace OP\UNIT;
  *
  */
 use OP\OP_CORE;
+use OP\OP_UNIT;
+use OP\IF_UNIT;
 use OP\Env;
 use function OP\Json;
 use function OP\CompressPath;
@@ -31,12 +33,12 @@ use function OP\CompressPath;
  * @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
  * @copyright Tomoaki Nagahara All right reserved.
  */
-class Dump
+class Dump implements IF_UNIT
 {
 	/** trait
 	 *
 	 */
-	use OP_CORE;
+	use OP_CORE, OP_UNIT;
 
 	/** Escape variable.
 	 *
