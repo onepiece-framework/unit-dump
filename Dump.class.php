@@ -2,7 +2,7 @@
 /**
  * unit-dump:/Dump.class.php
  *
- * @creation  2018-04-13
+ * @created   2018-04-13
  * @version   1.0
  * @package   unit-dump
  * @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
@@ -27,7 +27,7 @@ use function OP\CompressPath;
 
 /** Dump
  *
- * @creation  2018-04-13
+ * @created   2018-04-13
  * @version   1.0
  * @package   unit-dump
  * @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
@@ -47,27 +47,7 @@ class Dump implements IF_UNIT
 	static function _Escape(&$args)
 	{
 		foreach( $args as &$arg ){
-			switch( $type = gettype($arg) ){
-				case 'array':
-					self::_Escape($arg);
-					break;
-
-				case 'object':
-					$name = get_class($arg);
-					$arg  = "object($name)";
-					break;
-
-				case 'resource':
-					$type = get_resource_type($arg);
-					$arg  = "resource(type:$type)";
-					break;
-
-				case 'unknown type':
-					$arg  = $type;
-					break;
-
-				default:
-			}
+			self::_EscapeByType($arg);
 		}
 	}
 
