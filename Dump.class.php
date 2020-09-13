@@ -80,6 +80,27 @@ class Dump implements IF_UNIT
 		}
 	}
 
+	/** Object to array.
+	 *
+	 * @created   2020-09-06
+	 * @param     array        $arg
+	 */
+	static function _Object(&$arg)
+	{
+		//	Get object name.
+		$name = get_class($arg);
+		$arr["object($name)"] = [];
+
+		//	Foreach property.
+		foreach( $arg as $key => $val ){
+			self::_EscapeByType($val);
+			$arr["object($name)"][$key] = $val;
+		}
+
+		//	...
+		$arg = $arr;
+	}
+
 	/** Mark
 	 *
 	 */
