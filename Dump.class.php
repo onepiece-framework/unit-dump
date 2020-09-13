@@ -51,6 +51,35 @@ class Dump implements IF_UNIT
 		}
 	}
 
+	/** Separate for _Object() from _Escape().
+	 *
+	 * @created   2020-09-06
+	 * @param     mixed        &$arg
+	 */
+	static function _EscapeByType(&$arg)
+	{
+		switch( $type = gettype($arg) ){
+			case 'array':
+				self::_Escape($arg);
+				break;
+
+			case 'object':
+				self::_Object($arg);
+				break;
+
+			case 'resource':
+				$type = get_resource_type($arg);
+				$arg  = "resource(type:$type)";
+				break;
+
+			case 'unknown type':
+				$arg  = $type;
+				break;
+
+			default:
+		}
+	}
+
 	/** Mark
 	 *
 	 */
