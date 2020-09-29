@@ -235,10 +235,6 @@ class Dump implements IF_UNIT
 	 */
 	static function MarkJson($value, $trace)
 	{
-		global $_JSON; // Why used global variable? <-- Use API?
-		$mark = [];
-		$mark['message']   = $value;
-		$mark['backtrace'] = $trace;
-		$_JSON['admin']['mark'][] = $mark;
+		\OP\UNIT\Api::Dump(['trace'=>$trace,'value'=>$value]);
 	}
 }
