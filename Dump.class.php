@@ -137,6 +137,7 @@ class Dump implements IF_UNIT
 				break;
 
 			case 'text/plain':
+			case 'text/shell':
 				self::MarkPlain($args, $trace);
 				break;
 
