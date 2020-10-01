@@ -212,8 +212,18 @@ class Dump implements IF_UNIT
 	 */
 	static function MarkPlain($value, $trace)
 	{
-		echo "{$trace['file']} #{$trace['line']}".PHP_EOL;
-		print_r($value);
+		//	...
+		echo "{$trace['file']} #{$trace['line']} - ";
+
+		//	...
+		if( count($value) === 1 ){
+			print_r($value[0]);
+		}else{
+			print_r($value);
+		};
+
+		//	...
+		echo PHP_EOL;
 	}
 
 	/** MarkJS
