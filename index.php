@@ -47,6 +47,8 @@ register_shutdown_function(function(){
 		echo '<script>';
 		include(__DIR__.'/mark.js');
 		include(__DIR__.'/dump.js');
+		include(__DIR__.'/args.js');
+		include(__DIR__.'/arg.js' );
 		echo '</script>';
 
 		//	...
