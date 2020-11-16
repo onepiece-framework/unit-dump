@@ -33,6 +33,10 @@ div.OP_DUMP th {
 	cursor: pointer;
 }
 
+div.OP_DUMP td {
+	text-align: left;
+}
+
 div.OP_DUMP td > span {
 	padding: 0.25em;
 }
