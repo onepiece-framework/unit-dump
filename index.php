@@ -23,7 +23,7 @@ register_shutdown_function(function(){
 	//	...
 	try{
 		//	...
-		$webpack = Unit::Instantiate('Webpack');
+		$webpack = Unit::Instantiate('WebPack');
 		$webpack->Js ([__DIR__.'/mark', __DIR__.'/dump']);
 		$webpack->Css([__DIR__.'/mark', __DIR__.'/dump']);
 
