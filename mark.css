@@ -9,7 +9,26 @@
  */
 
 div.OP_MARK {
+	color: inherit;
 	font-size: 9pt;
+	width: 100vw;
+	/*
+	overflow: scroll;
+	white-space: nowrap;
+	*/
+}
+
+div.OP_MARK span.arg.string {
+	/*
+	border: 1px solid black;
+	max-height: 1em;
+	overflow: scroll;
+	white-space: nowrap;
+	*/
+}
+
+div.OP_MARK span.arg.string:hover {
+	background-color: #f0f0f0;
 }
 
 div.OP_MARK > span {
