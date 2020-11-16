@@ -19,7 +19,9 @@ namespace OP;
 include(__DIR__.'/Dump.class.php');
 
 //	...
+/*
 register_shutdown_function(function(){
+*/
 	//	...
 	try{
 		//	...
@@ -43,4 +45,6 @@ register_shutdown_function(function(){
 		include(__DIR__.'/dump.css');
 		echo '</style>';
 	};
+/*
 });
+*/
