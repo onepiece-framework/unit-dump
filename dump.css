@@ -16,10 +16,12 @@ div.OP_DUMP * {
 	font-size: 9pt;
 }
 
-div.OP_DUMP _table,
+div.OP_DUMP table,
 div.OP_DUMP th,
 div.OP_DUMP td {
 	border: 1px solid black;
+	margin: 0;
+	padding:0;
 }
 
 div.OP_DUMP table {
