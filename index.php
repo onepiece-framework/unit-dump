@@ -16,6 +16,11 @@
 namespace OP;
 
 //	...
+if(!Env::isAdmin() ){
+	return;
+}
+
+//	...
 include(__DIR__.'/Dump.class.php');
 
 //	...
