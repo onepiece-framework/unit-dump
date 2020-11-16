@@ -21,6 +21,11 @@ if(!Env::isAdmin() ){
 }
 
 //	...
+if( class_exists('\OP\UNIT\Dump') ){
+	return;
+}
+
+//	...
 include(__DIR__.'/Dump.class.php');
 
 //	...
