@@ -26,7 +26,7 @@ if( class_exists('\OP\UNIT\Dump') ){
 }
 
 //	...
-include(__DIR__.'/Dump.class.php');
+require_once(__DIR__.'/Dump.class.php');
 
 //	...
 /*
