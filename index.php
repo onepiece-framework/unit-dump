@@ -29,9 +29,7 @@ if( class_exists('\OP\UNIT\Dump') ){
 require_once(__DIR__.'/Dump.class.php');
 
 //	...
-/*
-register_shutdown_function(function(){
-*/
+//register_shutdown_function(function(){
 	//	...
 	try{
 		//	...
@@ -57,6 +55,4 @@ register_shutdown_function(function(){
 		include(__DIR__.'/dump.css');
 		echo '</style>';
 	};
-/*
-});
-*/
+//});
