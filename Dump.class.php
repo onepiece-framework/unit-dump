@@ -245,6 +245,6 @@ class Dump implements IF_UNIT
 	 */
 	static function MarkJson($value, $trace)
 	{
-		\OP\UNIT\Api::Dump(['trace'=>$trace,'value'=>$value]);
+		Unit('Api')->Dump(['trace'=>$trace,'value'=>$value]);
 	}
 }
