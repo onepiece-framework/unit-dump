@@ -245,6 +245,7 @@ class Dump implements IF_UNIT
 	 */
 	static function MarkJson($value, $trace)
 	{
-		Unit('Api')->Dump(['trace'=>$trace,'value'=>$value]);
+		//	For Eclipse validatiion warning.
+		'\OP\UNIT\Api'::Dump(['trace'=>$trace,'value'=>$value]);
 	}
 }
