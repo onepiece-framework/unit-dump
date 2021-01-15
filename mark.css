@@ -11,7 +11,7 @@
 div.OP_MARK {
 	color: inherit;
 	font-size: 9pt;
-	width: 100vw;
+	width: 100%;
 	/*
 	overflow: scroll;
 	white-space: nowrap;
