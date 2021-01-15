@@ -19,7 +19,7 @@ div.OP_DUMP * {
 div.OP_DUMP table,
 div.OP_DUMP th,
 div.OP_DUMP td {
-	border: 1px solid black;
+	border: 1px solid var(--root-color-border);
 	margin: 0;
 	padding:0;
 }
