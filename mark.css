@@ -19,6 +19,7 @@ div.OP_MARK {
 }
 
 div.OP_MARK span.arg.string {
+	color: inherit;
 	/*
 	border: 1px solid black;
 	max-height: 1em;
